@@ -16,7 +16,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.txmq.aviator.blocklogger.Block;
 import com.txmq.aviator.blocklogger.IBlockLogger;
 import com.txmq.aviator.core.Aviator;
-import com.txmq.aviator.core.swirlds.AviatorSwirlds;
 import com.txmq.aviator.messaging.AviatorMessage;
 
 /**

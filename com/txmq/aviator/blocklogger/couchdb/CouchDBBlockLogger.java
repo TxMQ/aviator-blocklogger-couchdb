@@ -16,7 +16,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.txmq.aviator.blocklogger.Block;
 import com.txmq.aviator.blocklogger.IBlockLogger;
 import com.txmq.aviator.core.Aviator;
-import com.txmq.aviator.core.swirlds.AviatorSwirlds;
 import com.txmq.aviator.messaging.AviatorMessage;
 
 /**
@@ -199,7 +198,7 @@ public class CouchDBBlockLogger implements IBlockLogger {
 		//Determine database name
 		String databaseName = parameterMap.get("databaseName");
 		if (parameterMap.containsKey("useAsPrefix") && parameterMap.get("useAsPrefix").equals("true")) {
-			databaseName = databaseName + Aviator.getState().getMyName().toLowerCase();
+			databaseName = databaseName + Aviator.getNodeName().toLowerCase();
 		}
 		
 		//Determine protocol
